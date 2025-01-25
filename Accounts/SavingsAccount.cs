@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace BankAccountSim.Accounts
 {
-    internal class SavingsAccount
+    public class SavingsAccount : Account
     {
+        public decimal InterestRate { get; set; }
+
+        public SavingsAccount(decimal InterestRate, string accountHolder, decimal balance) : base(accountHolder, balance)
+        {
+            this.InterestRate = InterestRate;
+        }
+
+        public void AddInterest()
+        {
+            decimal interest = Balance * InterestRate / 100;
+            Deposit(interest);
+            Console.WriteLine($"Interest applied: ${interest}");
+        }
+
+
     }
 }
