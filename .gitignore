@@ -1,0 +1,21 @@
+# Visual Studio files
+.vs
+.user
+.suo
+
+# Build and output directories
+bin
+obj
+
+# NuGet packages
+packages
+
+# Local development files
+.idea
+.vscode
+
+# macOS files
+.DS_Store
+
+# Ignore local app settings
+appsettings.Development.json
